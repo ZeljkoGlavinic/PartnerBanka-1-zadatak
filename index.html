@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta Izračunavanje vremena zarade</-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Izračunavanje vremena planirane zarade</title>
+	</head>
+	<body>
+		<h1>Izračunavanje vremena planirane zarade</h1>
+    <!-- Pojašnjenje namjene web-aplikacije -->
+		<p>
+			Koliko dugo morate raditi da biste s Vašom mjesečnom neto-plaćom zaradili
+			neki potreban (ciljani) iznos?
+		</p>
+		<p>U računu se pretpostavlja radni dan od osam radnih sati</p>
+    <!-- HTML-obrazac za unos korisnika -->
+		<form id="Obrazac">
+			<label for="netoPlaca">Vaša neto-plaća</label>
+			<input type="text" name="netoPlaca" id="netoPlaca" value="6700" />
+
+			<label for="brojRadnihDanaMjesečno">Broj radnih dana u mjesecu</label>
+			<input
+				type="text"
+				name="brojRadnihDanaMjesečno"
+				id="brojRadnihDanaMjesečno"
+        value="22"
+			/>
+
+			<label for="potrebanNovac">Potreban (ciljani) iznos</label>
+			<input type="text" name="potrebanNovac" id="potrebanNovac"  value="1264"/>
+
+			<input
+				type="button"
+				name="Izracunaj"
+				value="Izračunaj"
+				id="Izracunaj"
+				onclick="preuzmiUnosKorisnika(this.form)"
+			/>
+		</form>
+    <!-- Odlomak za ispisivanje rezultata u formi rečenice -->
+		<p id="rečenicaRezultat"></p>
+	</body>
+  <!-- Učitaj skriptu za očitavanje i izračunavanje -->
+	<script src="izracunajVrijemeZarade.js"></script>
+</html>
